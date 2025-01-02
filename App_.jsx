@@ -39,18 +39,11 @@ export default function App() {
 			<div className="timers">
 				<div className="timeControls">
 					<h3 className="sectionHeading">Session Length</h3>
-					<div className="arrows">
-						<button
-							type="button"
-							onClick={() => setSessionLength(sessionLength + 1)}
-						>
-							<i className="fa-solid fa-arrow-up" />
-						</button>
-						<h3>{sessionLength}</h3>
-						<button type="button" onClick={decreaseSession}>
-							<i className="fa-solid fa-arrow-down" />
-						</button>
-					</div>
+					<Arrows
+						functionUp={increaseSession}
+						functionDown={decreaseSession}
+						time={sessionLength}
+					/>
 				</div>
 				<div className="timeControls">
 					<h3 className="sectionHeading">Break Length</h3>

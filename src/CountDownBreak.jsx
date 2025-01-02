@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
 
-export default function CountDown({ hours = 0, minutes = 0, seconds = 0 }) {
-	const [paused, setPaused] = useState(true);
+export default function CountDownBreak({
+	hours = 0,
+	minutes = 0,
+	seconds = 0,
+}) {
+	const [paused, setPaused] = useState(false);
 	const [over, setOver] = useState(false);
 	const [[h, m, s], setTime] = useState([hours, minutes, seconds]);
+
 
 	const tick = () => {
 		if (paused || over) return;
