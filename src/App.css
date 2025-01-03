@@ -100,7 +100,9 @@ body,
 	align-items: center;
 	justify-content: center;
 }
-#countdown-timer {
+
+#countdown-timer,
+#countdown-break {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
