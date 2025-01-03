@@ -181,10 +181,14 @@ export default function App() {
 							setPaused(newPaused);
 						}}
 					>
-						{paused ? "Start|Resume" : "Pause"}
+						{paused ? (
+							<i className="fa-solid fa-play" />
+						) : (
+							<i className="fa-solid fa-pause" />
+						)}
 					</button>
 					<button type="button" id="reset" onClick={() => reset()}>
-						Reset
+						<i className="fa fa-refresh" />
 					</button>
 				</div>
 			</div>
